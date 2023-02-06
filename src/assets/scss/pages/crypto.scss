@@ -1,0 +1,59 @@
+.crypto {
+  flex: 1 1 100%;
+  &__column {
+    flex: 1 1 100%;
+    &--orders-book {
+      max-width: 740px;
+      width: 100%;
+      gap: 10px;
+      @include md-block {
+        max-width: 100%;
+        padding: 0 20px;
+        justify-content: center;
+        div.border--left {
+          display: none;
+        }
+      }
+      @include xxs-block {
+        padding: 0;
+      }
+    }
+  }
+}
+.orders-book {
+  &__list {
+    @include md-block {
+      max-height: 300px !important;
+    }
+  }
+
+  @include xs-block {
+    &__top {
+      &-info {
+        div {
+          width: calc(100% / 2) !important;
+
+          &:last-child {
+            display: none;
+          }
+        }
+
+        div:nth-child(2) {
+          text-align: end !important;
+        }
+      }
+    }
+
+    &__item-info {
+      width: calc(100% / 2) !important;
+    }
+
+    &__item-info:nth-child(2) {
+        text-align: end !important;
+    }
+
+    &__item--total {
+        display: none;
+    }
+  }
+}
